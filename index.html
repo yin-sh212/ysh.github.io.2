@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JoTang Chatbot</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <a href="#settings" >
+                <i class="fas fa-list"></i>
+            </a>
+            <h1>JoTang 聊天室</h1>
+        </header>
+        <!-- main chatter -->
+        <main>
+            <div class="session-controls">
+                <button id="newSession">新建会话</button>
+                <button id="deleteSession">删除会话</button>
+    
+                <button>选择会话</button>
+                    <select id="sessionSelector" >
+                        
+                    </select>
+               
+            </div>
+
+            <!-- start chat -->
+            <div class="chat-container">
+                <div class="messages" id="messages"></div>
+                <div class="input-area">
+                    <input type="text" id="userInput" placeholder="请输入你的问题..." />
+                    <button id="send">发送</button>
+                </div>
+            </div>
+
+            <!-- 管理 -->
+            <div class="context-menu" id="contextMenu">
+                <div class="context-menu-item" id="renameSession">重命名</div>
+                <div class="context-menu-item" id="deleteSessionMenu">删除</div>
+            </div>
+        </main>
+
+        <footer>
+            <p>2024 OpenJT</p>
+            <p>
+                焦糖工作室(Jotang Studio)是电子科技大学信软学院创新工坊的一个学生技术团体<br>
+                活动地点:电子科技大学沙河校区三教507和403
+            </p>
+        </footer>
+    </div>
+    <div class="settings" id="settings">
+        <h2>个性化设置</h2>
+        <div class="settings">
+            <label>背景</label>
+            <input type="color" id="bgColor" value="#fff">
+            <!-- <label>文字</label>
+            <input type="color" id="textColor" value="#000"> -->
+            <button id="applySettings">应用设置</button>
+        </div>
+    
+    </div>
+    <script src="js/indexinitial.js"></script>
+</body>
+</html>
