@@ -29,22 +29,23 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content:center;
     align-items: center;
     height: 100px;
     width: 100%;
     padding: 0px 30px;
     font: 30px 700;
     background-color: rgba(51, 102, 0,0.9);
+    border-radius: 6px;
 }
 
 header h1{
     font-weight: 80px;
     color: white;
-    margin-left: 480px;
 }
 
 header a{
+    margin-right: 10px;
     scroll-behavior: smooth;
 }
 main{
@@ -61,6 +62,7 @@ main{
     align-items: start;
     margin: 20px;
     width: 110px;
+    
 }
 
 button{
@@ -73,21 +75,22 @@ button{
     cursor: pointer;
     margin: 0px 5px ;
     border-bottom: #fff solid 1px;
-
+    border-radius: 6px;
 }
 #sessionSelector{
-    /* display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start; */
+    background-color: rgba(51, 102, 0,0.9);
+    color: white;
     width: 100px;
-    min-height: 40px;
+    height: 40px;
     margin: 0px 5px ;
     overflow: auto;
+    border-radius: 6px;
+    font-weight: 700;
+    line-height: 40px;
 }
 
 .session-option{
-    display: flex;
+    display: block;
     width: 100px;
     height: 40px;
     font-size: large;
@@ -96,8 +99,7 @@ button{
     cursor: pointer;
     margin: 0px 5px ;
     border-bottom: #fff solid 1px;
-    align-items: center;
-    justify-content: center;
+    
 }
 
 
@@ -105,8 +107,6 @@ button{
 .chat-container {
     display: flex;
     flex: 1;
-    /* width: 100%; */
-    /* height: 74vh; */
     flex-direction: column;
     align-items: start;
     border: 1px solid #fff;
@@ -123,36 +123,6 @@ button{
     height: 450px;
     overflow-y: auto;
     margin-bottom: 10px;
-}
-
-.user-messages {
-    display: flex;
-    border-radius: 8px;
-    max-width: 80%;
-    height: auto;
-    padding: 4px 10px;
-    margin: 3px 0px;
-    align-self: flex-end;
-    text-align: right;
-    font-size: 16px;
-    word-wrap: break-word;
-    background-color: rgba(72, 252, 48, 0.5);
-    color: #000;
-}
-
-.system-messages {
-    display: flex;
-    border-radius: 8px;
-    max-width: 80%;
-    height: auto;
-    padding: 4px 10px;
-    margin: 3px 0px;
-    align-self: flex-start;
-    text-align: left;
-    font-size: 16px;
-    word-wrap: break-word;
-    background-color: antiquewhite;
-    color: #000;
 }
 
 .input-area {
@@ -222,4 +192,37 @@ h2{
     width: 20%;
     height: 30px;
     margin-bottom:20px ;
+}
+/* 使用两个类统一管理新消息的css属性 */
+/* 添加CSS类 */
+.user-message {
+    display: block;
+    border-radius: 8px;
+    max-width: 80%;
+    height: auto;
+    padding: 4px 10px;
+    margin: 3px;
+    /* 使用这个实现block布局下的右对齐 */
+    margin-left: auto;
+    /* align-self: flex-end; */
+    text-align: right;
+    font-size: 16px;
+    word-wrap: break-word;
+    background-color: antiquewhite;
+    color: #000;
+}
+
+.system-message {
+    display: block;
+    border-radius: 8px;
+    max-width: 80%;
+    height: auto;
+    padding: 4px 10px;
+    margin: 3px;
+    align-self: flex-start;
+    text-align: left;
+    font-size: 16px;
+    word-wrap: break-word;
+    background-color: antiquewhite;
+    color: #000;
 }
