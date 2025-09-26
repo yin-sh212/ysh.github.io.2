@@ -232,7 +232,7 @@ async function responseMessage(userMessage) {
 // 调用DeepSeek API的函数（适用于浏览器环境）
 async function callAPI(userInput) {
     // 你的DeepSeek API Key
-    const apiKey = 'sk-83a9f248cac344349500589d2d9a5482';
+    const apiKey = 'sk-83a9f248cac344349500589d2dxxxxxx';
     try {
         // 准备聊天历史记录
         const messages = [];
@@ -451,3 +451,4 @@ function updateSessionSelector() {
         sessionSelector.style.backgroundColor = savedColor;
     }
 }
+
